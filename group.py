@@ -9,5 +9,15 @@ nash = {"name":"nash","age":34,"job":"chef","connections":{"cousins":["john"],"t
 my_group =[jill,zalika,john,nash]
 
 
+### now add some comprehensions
+
+max_age = max([ person["age"] for person in my_group])
+n_relations = sum([ len(person["connections"][key]) for person in my_group for key in person["connections"]  ])
+mean_relations=n_relations/len(my_group)
+
+print(max_age)
+print(mean_relations)
+
+
 
 
