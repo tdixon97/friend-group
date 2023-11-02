@@ -15,7 +15,10 @@ max_age = max([ person["age"] for person in my_group])
 n_relations = sum([ len(person["connections"][key]) for person in my_group for key in person["connections"]  ])
 mean_relations=n_relations/len(my_group)
 
+max_age_relation= max( [[person["age"] for key in person["connections"] if len(person["connections"][key])>0 ][0] for person in my_group ])
+
 print(max_age)
+print(max_age_relation)
 print(mean_relations)
 
 
